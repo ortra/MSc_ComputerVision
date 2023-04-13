@@ -17,9 +17,9 @@ In the images below we can see the matched points vs the perfect match points on
 xwywzw=f0000f000010xwywzw1
 
 This transformation can be also denoted by the following equations
-$$
+
 xw=fxw;       yw=fyw;       zw=zw                  for non-zero scalar, f
-$$
+
 This point can be projected onto image plain that received by a pinhole camera according to the following transformation that we developed in class 
 
 p=x,y    →    p=xy1
