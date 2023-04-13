@@ -2,18 +2,7 @@
 
 **Computer Vision**
 
-**2022-2023**
-
-**Assignment #1**
-
-
-Students
-
-ID1: 301613501
-
-ID2: 305207946
-
-
+**Homography & Panorama**
 
 **Preparatory Steps**
 
