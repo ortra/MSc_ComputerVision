@@ -8,7 +8,7 @@
 
 In the images below we can see the matched points vs the perfect match points on the source and destination images.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.002.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.002.png)
 
 **Part A1: Homography Computation**
 
@@ -127,7 +127,7 @@ Hnaive=1.43457214e+00  2.10443232e-01 -1.27718679e+031.34265155e-02  1.34706123e
 
 Snapshot for documentation:
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.003.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.003.png)
 
 **Part A2: Forward Mapping - Slow and Fast**
 
@@ -135,22 +135,22 @@ Snapshot for documentation:
 
 The slow commutation took ~9s.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.004.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.004.png)
 
 The function retrieves the following image.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.005.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.005.png)
 
 1. See implementation of **compute\_forward\_homography\_fast** in **ex1\_student\_solution** 
 
 
 The computation time of this method is roughly ~90ms.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.006.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.006.png)
 
 The function retrieves the following image.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.007.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.007.png)
 
 It can clearly be observed that the same image was produced by both of the methods of Forward Homography implementation, however the Fast method yields it within much less computation time.
 
@@ -160,15 +160,15 @@ It can clearly be observed that the same image was produced by both of the metho
 
 These issues are seen in the results we yield: dark pixels and artificial edges that are missing in the original image.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.008.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.008.png)
 
 1. When we used imperfect match points (matches.mat), we got different Homography matrix. 
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.009.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.009.png)
 
 This projection matrix results in an unclear and messy image that looks even partially upside-down.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.010.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.010.png)
 
 As we learned in the class, we know that noises affect the Homography model a lot, so we can conclude that the non-matched points, from imperfect match points file, are the noises that changed our Homography matrix and the result image. In addition, we can see that in the left side of the image the “holes”, that caused by the forward mapping process, were increased.
 
@@ -186,7 +186,7 @@ The test Homography function calculates the following 2 parameters.
 
 Here we can see our results, while the probability is 16% and the MSE error is the other value (456 in pixels units).
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.011.png) 
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.011.png) 
 
 1. See implementation of **meet\_the\_model\_points** in **ex1\_student\_solution**
 
@@ -229,13 +229,13 @@ In order to cover all the options for selecting n=4 points out of the total 30 m
 
 1. The obtained RANSAC Homography matrix and its output image are given below.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.012.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.012.png)
 
 Above results show how well the RANSAC algorithm deals with outliers: the projective matrix's coefficients are close to those we received for the perfectly matching points in the previous sections. The MSE distance is also significantly decreased.
 
 All the mentioned above can explains the similarity of the RANSAC output image (below), compared to the perfect match transformation images.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.013.png)**
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.013.png)**
 
 **Part C: Panorama Creation**
 
@@ -247,7 +247,7 @@ All the mentioned above can explains the similarity of the RANSAC output image (
 
 1. Panorama output image
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.014.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.014.png)
 
 The images are "stitched" thanks to the overlapping sections where the inliers are.**
 
@@ -256,24 +256,24 @@ The images are "stitched" thanks to the overlapping sections where the inliers a
 
 1. In order to get acceptable results, we chose the matching points that marked in red below.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.015.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.015.png)
 
 In addition, we changed the maximal error and decimation factor as shown below.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.016.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.016.png)
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.017.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.017.png)
 
 And then ran the script and got the following results. While we can see the we got the same results with similar phenomena as we got previously above.
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.018.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.018.png)
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.019.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.019.png)
 
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.020.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.020.png)
 
-![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.021.png)
+![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.021.png)
 
 
 
