@@ -1,4 +1,4 @@
-﻿![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.001.png)
+﻿![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.001.png)
 
 **Computer Vision**
 
@@ -24,7 +24,7 @@ See implementation of **\_\_getitem\_\_** and **\_\_len\_\_** in **faces\_datase
 
 Result figure of **plot\_samples\_of\_faces\_dataset.py**
 
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.002.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.002.png)
 
 # **Question 3:**
 
@@ -39,7 +39,7 @@ See implementation of **evaluate\_model\_on\_dataloader** in **trainer.py**
 We used the following cmd in the terminal:
 
 *python train\_main.py -d fakes\_dataset -m SimpleNet --lr 0.001 -b 32 -e 5 -o Adam*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.003.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.003.png)
 
 
 
@@ -62,14 +62,14 @@ Since we are training the network on the Train Set of data, it is making sense t
 We used the following cmd in the terminal:
 
 *python plot\_accuracy\_and\_loss.py -m SimpleNet -j out/fakes\_dataset\_SimpleNet\_Adam.json -d fakes\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.004.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.004.png)
 
 We got the 2 graphs below and it is possible to see that they show similar behavior as we described in the table above, as expected. 
 
 
 |**Accuracy**|**Loss**|
 | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.005.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.006.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.005.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.006.png)|
 #
 
 # **Question 8:**
@@ -123,12 +123,12 @@ See implementation of **get\_soft\_scores\_and\_true\_labels** in **numerical\_a
 Running the following command plotted the ROC and DET curves.
 
 *python numerical\_analysis.py -m SimpleNet -cpp checkpoints/fakes\_dataset\_SimpleNet\_Adam.pt -d fakes\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.007.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.007.png)
 
 
 |**ROC**|**DET**|
 | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.008.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.009.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.008.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.009.png)|
 It can clearly be observed that the model would assign a higher score to a random true-positive event (fake image labeled '1') than to a false-negative event (real image labeled 0) for the second score, while the exact opposite behavior is concluded for the first score. Meaning the model would assign a higher score to a random false-negative event than to a false-negative event. Due to the fact that the first score is the soft score obtained for how real the image is, the second score is the soft score obtained for how fake the image is.
 
 # **Question 11:**
@@ -160,19 +160,19 @@ The reason that the graphs for the first score is completely different from the 
 We used the following cmd in the terminal which doesn’t plot any figures but plot the \*.json and \*.pt files that will be used and presented in the next sections.
 
 *python train\_main.py -d synthetic\_dataset -m SimpleNet --lr 0.001 -b 32 -e 5 -o Adam*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.010.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.010.png)
 
 # **Question 13:**
 
 We used the following cmd in the terminal:
 
 *python plot\_accuracy\_and\_loss.py -m SimpleNet -j out/synthetic\_dataset\_SimpleNet\_Adam.json -d synthetic\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.011.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.011.png)
 
 
 |**Accuracy**|**Loss**|
 | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.012.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.013.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.012.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.013.png)|
 This time the accuracy is roughly 50% throughout all epochs for all sets. Same observation can be claimed for the loss Vs epoch for all sets – its trend is quite stable.
 
 
@@ -197,16 +197,16 @@ We got a terrible classifier model that can't separate negative classes from pos
 
 |**ROC**|**DET**|
 | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.014.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.015.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.014.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.015.png)|
 
 # **Question 17:**
 
 In the following table we sampled deepfake and synthetic images from the given dataset. It is stands out that the synthetic faces are much more realistic then the deepfake faces. So, it is making sense that our classifier doesn’t “know” to so separate synthetic and real images.
 
 
-|**Deepfake**|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.016.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.017.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.018.png)|
+|**Deepfake**|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.016.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.017.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.018.png)|
 | - | - | - | - |
-|**Synthetic**|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.019.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.020.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.021.png)|
+|**Synthetic**|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.019.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.020.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.021.png)|
 
 # **Question 18:**
 
@@ -237,11 +237,11 @@ First, in figure 5 from the paper, we can see that the input feature dimension t
 
 In table 3 from the paper, we can say that the Xception holds over than 22 million parameters. The exact number represented from the paper in the table below.
 
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.022.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.022.png)
 
 Implementing a short script to create the model and use the method represent exactly the same number of parameters:
 
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.023.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.023.png)
 
 See the implementation in **nof\_params.py**.
 
@@ -253,22 +253,22 @@ See implementation of **get\_xception\_based\_model** in **models.py**
 
 Totally we added 272834 parameters 23,128,786-22,855,952=272,834
 
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.024.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.024.png)
 
 # **Question 25:**
 
 *python train\_main.py -d synthetic\_dataset -m XceptionBased --lr 0.001 -b 32 -e2 -o Adam*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.025.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.025.png)
 
 # **Question 26:**
 
 *python plot\_accuracy\_and\_loss.py -m XceptionBased -j out/synthetic\_dataset\_ XceptionBased\_Adam.json -d synthetic\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.026.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.026.png)
 
 
 |**Accuracy**|**Loss**|
 | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.027.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.028.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.027.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.028.png)|
 
 Contrary to the results we got in the previous sections, here it is noticeable that the accuracy and the loss are monotonic, increasing and decreasing (respectively), and manage to converge after 2 epochs. But we received unexpected phenomena that are manifested when the accuracy of the test set is higher than the accuracy of validation set. Moreover, we can the accuracy of the training set is too close to 100% which hint that our model is over fitting and will not be reliable for new, unseen data. 
 
@@ -287,7 +287,7 @@ Both of the graphs, the ROC and the DET seems very close to perfect classifier. 
 
 |**ROC**|**DET**|
 | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.029.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.030.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.029.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.030.png)|
 
 
 # **Rhetorical Questions:**
@@ -314,18 +314,18 @@ See implementation of **compute\_gradient\_saliency\_maps** in **saliency\_maps.
 # **Question 32:**
 
 *python saliency\_map.py -m SimpleNet -cpp checkpoints/fakes\_dataset\_SimpleNet\_Adam.pt -d fakes\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.031.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.031.png)
 
 *python saliency\_map.py -m XceptionBased -cpp checkpoints/synthetic\_dataset\_XceptionBased\_Adam.pt -d synthetic\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.032.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.032.png)
 
 
 ||**Saliency Maps and Images Pairs**|**Means of Saliency Maps**||||
 | :-: | :-: | :-: | :-: | :-: | :-: |
 |**SimpleNet**|Fake Dataset |Fake vs. Real||||
-||![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.033.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.034.png)||||
+||![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.033.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.034.png)||||
 |**XceptionBased**|Synthetic Dataset |Synthetic vs. Real||||
-||![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.035.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.036.png)||||
+||![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.035.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.036.png)||||
 |||||||
 |||||||
 
@@ -336,7 +336,7 @@ It is easier to explain the result when we look at the mean images. The ***Simpl
 Installed by using the following *pip* command.
 
 pip install grad-cam
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.037.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.037.png)
 
 # **Question 34:**
 
@@ -347,13 +347,13 @@ See implementation of **get\_grad\_cam\_visualization** in **grad\_cam\_analysis
 Running the following 3 commands generated the required ***Grad CAM*** images.
 
 *python grad\_cam\_analysis.py -m SimpleNet -cpp checkpoints/fakes\_dataset\_SimpleNet\_Adam.pt -d fakes\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.038.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.038.png)
 
 *python grad\_cam\_analysis.py -m SimpleNet -cpp checkpoints/synthetic\_dataset\_SimpleNet\_Adam.pt -d synthetic\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.039.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.039.png)
 
 *python grad\_cam\_analysis.py -m XceptionBased -cpp checkpoints/synthetic\_dataset\_XceptionBased\_Adam.pt -d synthetic\_dataset*
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.040.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.040.png)
 
 In the following table we represent the grad cam analysis on 3 different cases.
 
@@ -369,19 +369,19 @@ There are 3 major phenomena that correlate with the results that we’ve gotten 
 
 |**SimpleNet trained on Deepfakes**|
 | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.041.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.042.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.041.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.042.png)|
 
 
 
 |**SimpleNet trained on Synthetic Faces**|
 | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.043.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.044.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.043.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.044.png)|
 
 
 
 |**Xception-Based trained on Synthetic faces**|
 | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.045.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.046.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.045.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.046.png)|
 
 
 
@@ -400,7 +400,7 @@ We got the best result with network that based on similar architecture like the 
 
 Finally, we’ve got the following structure.
 
-![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.047.png)
+![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.047.png)
 
 - The last 2 layers are separated because of the drawer constraint.
 - The network can also be written as:
@@ -415,5 +415,5 @@ score=11+log1034850∙10010∙95.8-90100=2.89
 
 |**ROC**|**Accuracy**|**Model Summary and Parameters**|
 | :-: | :-: | :-: |
-|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.048.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.049.png)|![](Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.050.png)|
+|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.048.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.049.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.050.png)|
 
