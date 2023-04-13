@@ -1,1 +1,1 @@
-# MSc---Computer-Vision
+# MSc_ComputerVision
