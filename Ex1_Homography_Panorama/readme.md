@@ -1,4 +1,4 @@
-﻿![](Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.001.png)
+﻿![](images/Aspose.Words.868d2d4b-a55a-436a-8712-0ab0f17d8ccf.001.png)
 
 **Computer Vision**
 
