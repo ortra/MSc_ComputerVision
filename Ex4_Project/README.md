@@ -8,12 +8,7 @@
 
 **Project**
 
-
-Students
-
-ID1: 301613501
-
-ID2: 305207946
+**Facial Manipulation Detection**
 
 
 # **Question 1:**
