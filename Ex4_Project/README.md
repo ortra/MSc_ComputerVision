@@ -1,42 +1,42 @@
 ﻿![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.001.png)
 
-**Computer Vision**
+## **Computer Vision**
 
-**2022-2023**
+## **2022-2023**
 
-**Assignment #4**
+## **Assignment #4**
 
-**Project**
+## **Project**
 
-**Facial Manipulation Detection**
+# **Facial Manipulation Detection**
 
 
-# **Question 1:**
+### **Question 1:**
 
 See implementation of **\_\_getitem\_\_** and **\_\_len\_\_** in **faces\_dataset.py**
 
-# **Question 2:**
+### **Question 2:**
 
 Result figure of **plot\_samples\_of\_faces\_dataset.py**
 
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.002.png)
 
-# **Question 3:**
+### **Question 3:**
 
 See implementation of **train\_one\_epoch** in **trainer.py**
 
-# **Question 4:**
+### **Question 4:**
 
 See implementation of **evaluate\_model\_on\_dataloader** in **trainer.py**
 
-# **Question 5:**
+### **Question 5:**
 
 We used the following cmd in the terminal:
 
 *python train\_main.py -d fakes\_dataset -m SimpleNet --lr 0.001 -b 32 -e 5 -o Adam*
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.003.png)
 
-# **Question 6:**
+### **Question 6:**
 
 Extracting the \*.json file, we can see the following conclusions.
 
@@ -49,7 +49,7 @@ Extracting the \*.json file, we can see the following conclusions.
 
 Since we are training the network on the Train Set of data, it is making sense that the performance will be best on this part of data, so the constant decrease of the loss and increasing for the accuracy are the results that we expected to see for the train set. On the other hand, we can see that the results on the validation set and test set are not stable. Moreover, the loss of the Test set per epoch was increased w.r.t. the previous one. A possible explanation of these results may be found in overfitting, where the resulting model describes random error or noise instead of the underlying relationship, so that the network learns patterns only relevant to the training set, and therefore might harm its ability to generalize. Indeed, the loss shows the trend of increase along epochs when evaluating the model for samples not in the Training set. Maybe if we ran more iterations, we would get better performance.
 
-# **Question 7:**
+### **Question 7:**
 
 We used the following cmd in the terminal:
 
@@ -62,9 +62,9 @@ We got the 2 graphs below and it is possible to see that they show similar behav
 |**Accuracy**|**Loss**|
 | :-: | :-: |
 |![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.005.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.006.png)|
-#
 
-# **Question 8:**
+
+### **Question 8:**
 
 Test accuracy corresponding to the highest validation accuracy
 
@@ -74,13 +74,13 @@ Test accuracy corresponding to the highest validation accuracy
 |**Highest Validation**|87\.5%|5|
 |**Corresponding Test** |81\.1%|5|
 
-# **Question 9:**
+### **Question 9:**
 
 Under the fakes\_dataset\test we can see that we have 700 fake images and 1400 real images.
 
 Therefore, the proportion of fake images to real images is 0.5. i.e., for every two real images in the set, there exists one fake image in the set.
 
-# **Question 10:**
+### **Question 10:**
 
 Background
 
@@ -123,7 +123,7 @@ Running the following command plotted the ROC and DET curves.
 |![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.008.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.009.png)|
 It can clearly be observed that the model would assign a higher score to a random true-positive event (fake image labeled '1') than to a false-negative event (real image labeled 0) for the second score, while the exact opposite behavior is concluded for the first score. Meaning the model would assign a higher score to a random false-negative event than to a false-negative event. Due to the fact that the first score is the soft score obtained for how real the image is, the second score is the soft score obtained for how fake the image is.
 
-# **Question 11:**
+### **Question 11:**
 
 First, we will remind that the notation in our project is (see **\_\_getitem\_\_** method):
 
@@ -147,14 +147,14 @@ Such that those two scores expected to be different and even opposite as we can 
 
 The reason that the graphs for the first score is completely different from the graphs for the second score is that each score represent the opposite case. It can also be seen by think of it as probabilities which the first score and the second score are pdf functions that describes the probability for how an image is a real or fake (respectively), such that the total area under the graph is sum to ~1 (see in the ROC graph title: AuC 1st + AuC 2nd = 0.116 + 0.885 = ~1). In the DET curve, the reason is similar – the opposite definitions of the parameters yield opposite results.
 
-# **Question 12:**
+### **Question 12:**
 
 We used the following cmd in the terminal which doesn’t plot any figures but plot the \*.json and \*.pt files that will be used and presented in the next sections.
 
 *python train\_main.py -d synthetic\_dataset -m SimpleNet --lr 0.001 -b 32 -e 5 -o Adam*
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.010.png)
 
-# **Question 13:**
+### **Question 13:**
 
 We used the following cmd in the terminal:
 
@@ -168,7 +168,7 @@ We used the following cmd in the terminal:
 This time the accuracy is roughly 50% throughout all epochs for all sets. Same observation can be claimed for the loss Vs epoch for all sets – its trend is quite stable.
 
 
-# **Question 14:**
+### **Question 14:**
 
 
 ||**Accuracy**|**At Epoch Number**|
@@ -182,7 +182,7 @@ Under the synthetic\_dataset\test we can see that we have 552 fake images and 55
 
 Therefore, the proportion of fake images to real images is ~1.
 
-# **Question 16:**
+### **Question 16:**
 
 We got a terrible classifier model that can't separate negative classes from positive classes at all. In other words, this classifier has the same performance as a random classifier. We can emphasis this claim by looking on the ROC and DET curves of the new model which trained on the synthetic images and see that the probability to get a classification of fake image is almost equal to real image. Rather than, in the DET curves we can see that the curves too close to each other. 
 
@@ -191,7 +191,7 @@ We got a terrible classifier model that can't separate negative classes from pos
 | :-: | :-: |
 |![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.014.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.015.png)|
 
-# **Question 17:**
+### **Question 17:**
 
 In the following table we sampled deepfake and synthetic images from the given dataset. It is stands out that the synthetic faces are much more realistic then the deepfake faces. So, it is making sense that our classifier doesn’t “know” to so separate synthetic and real images.
 
@@ -200,13 +200,13 @@ In the following table we sampled deepfake and synthetic images from the given d
 | - | - | - | - |
 |**Synthetic**|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.019.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.020.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.021.png)|
 
-# **Question 18:**
+### **Question 18:**
 
 Following the paper ([link](https://arxiv.org/pdf/1610.02357.pdf)), Xception is a deep convolutional neural network architecture that is pre-trained on the ImageNet dataset and JFT Google’s internal dataset. 
 
 The ImageNet dataset is a large collection of images that is commonly used to train and evaluate image classification models. It contains more than 14 million images across more than 20,000 different object classes. While the JFT is larger dataset with over 350 million images. 
 
-# **Question 19:**
+### **Question 19:**
 
 The basic building blocks of Xception include:
 
@@ -217,15 +217,15 @@ The basic building blocks of Xception include:
 1. **Batch Normalization:** Xception also includes batch normalization, which helps to reduce the internal covariate shift and improve the training of the model.
 1. **Activation function:** Xception uses ReLU as the activation function.
 
-# **Question 20:**
+### **Question 20:**
 
 The same question as Q18 so the answers are identical J
 
-# **Question 21:**
+### **Question 21:**
 
 First, in figure 5 from the paper, we can see that the input feature dimension to the final classification block is 2048-dimensional vectors.
 
-# **Question 22:**
+### **Question 22:**
 
 In table 3 from the paper, we can say that the Xception holds over than 22 million parameters. The exact number represented from the paper in the table below.
 
@@ -237,22 +237,22 @@ Implementing a short script to create the model and use the method represent exa
 
 See the implementation in **nof\_params.py**.
 
-# **Question 23:**
+### **Question 23:**
 
 See implementation of **get\_xception\_based\_model** in **models.py**
 
-# **Question 24:**
+### **Question 24:**
 
 Totally we added 272834 parameters 23,128,786-22,855,952=272,834
 
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.024.png)
 
-# **Question 25:**
+### **Question 25:**
 
 *python train\_main.py -d synthetic\_dataset -m XceptionBased --lr 0.001 -b 32 -e2 -o Adam*
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.025.png)
 
-# **Question 26:**
+### **Question 26:**
 
 *python plot\_accuracy\_and\_loss.py -m XceptionBased -j out/synthetic\_dataset\_ XceptionBased\_Adam.json -d synthetic\_dataset*
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.026.png)
@@ -264,7 +264,7 @@ Totally we added 272834 parameters 23,128,786-22,855,952=272,834
 
 Contrary to the results we got in the previous sections, here it is noticeable that the accuracy and the loss are monotonic, increasing and decreasing (respectively), and manage to converge after 2 epochs. But we received unexpected phenomena that are manifested when the accuracy of the test set is higher than the accuracy of validation set. Moreover, we can the accuracy of the training set is too close to 100% which hint that our model is over fitting and will not be reliable for new, unseen data. 
 
-# **Question 27:**
+### **Question 27:**
 
 
 ||**Accuracy**|**At Epoch Number**|
@@ -272,7 +272,7 @@ Contrary to the results we got in the previous sections, here it is noticeable t
 |**Highest Validation**|94\.7%|2|
 |**Corresponding Test** |96\.1%|2|
 
-# **Question 28:**
+### **Question 28:**
 
 Both of the graphs, the ROC and the DET seems very close to perfect classifier. But since we’ve got hint that our model is overfitting, probably those ideal result that we see here will be relevant mostly on our data and not on new, unseen data.
 
@@ -282,7 +282,7 @@ Both of the graphs, the ROC and the DET seems very close to perfect classifier. 
 |![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.029.png)|![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.030.png)|
 
 
-# **Rhetorical Questions:**
+### **Rhetorical Questions:**
 
 The first intuition about the reason we got a better result is that the XceptionBased model we used here is a model that already pre-trained and specifically designed for image classification tasks. Moreover, when we are looking on the results of the Saliency Maps below, in question 32 we can see how the pre-training and the specifically design are reflected on the features that the model is affected from.  That is, we can see that the XceptionBased model is affected by much more pixels compared to the SimpleNet that affected by very specific areas in the pictures.
 
@@ -293,17 +293,17 @@ However, it is important to note that adding too many parameters can lead the mo
 
 **Image-specific class saliency visualization** is a visualization technique used to highlight the regions of an image that are most important for a neural network's classification decision. The technique displays the contribution of each pixel of a particular input image to the network prediction. These maps are created by computing the gradient of the output of the neural network with respect to the input image. The resulting gradient is then overlaid on the original image, with the intensity of the overlay indicating the degree to which each pixel of the image contributed to the final classification. This helps to identify which areas of the image the network focused on when making its decision, and can be used to gain insight into how the network is processing the image.
 
-# **Question 30:**
+### **Question 30:**
 
 **Gradient-weighted Class Activation Maps (Grad-CAMs)** are a technique used to visualize which parts of an image a convolutional neural network (CNN) is using to make its predictions. The technique works by using the gradients of the output of a particular layer of the CNN with respect to the input image to highlight the regions of the input image that have the greatest impact on the CNN's output. This allows researchers and engineers to gain a better understanding of how the CNN is making its predictions, and can be used to improve the interpretability of the model or to identify areas where the model is failing.
 
 
-# **Question 31:**
+### **Question 31:**
 
 See implementation of **compute\_gradient\_saliency\_maps** in **saliency\_maps.py**
 
 
-# **Question 32:**
+### **Question 32:**
 
 *python saliency\_map.py -m SimpleNet -cpp checkpoints/fakes\_dataset\_SimpleNet\_Adam.pt -d fakes\_dataset*
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.031.png)
@@ -323,14 +323,14 @@ See implementation of **compute\_gradient\_saliency\_maps** in **saliency\_maps.
 
 It is easier to explain the result when we look at the mean images. The ***SimpleNet*** which trained on the fake faces affected by specific areas of the human faces while the ***XceptionBased*** model affected by the whole face. We can also see that the ***SimpleNet*** mean map of real images is very similar to the map of fake images, while in the other case of ***XceptionBased*** model the difference is more significant. Which means that the model probably gives less false predictions. One more interesting conclusion from the result is that the ***XceptionBased*** network is strongly affected by the whole face and not just by small parts of it.
 
-# **Question 33:**
+### **Question 33:**
 
 Installed by using the following *pip* command.
 
 pip install grad-cam
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.037.png)
 
-# **Question 34:**
+### **Question 34:**
 
 See implementation of **get\_grad\_cam\_visualization** in **grad\_cam\_analysis.py**
 
