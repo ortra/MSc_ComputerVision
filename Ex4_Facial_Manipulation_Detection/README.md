@@ -36,9 +36,6 @@ We used the following cmd in the terminal:
 *python train\_main.py -d fakes\_dataset -m SimpleNet --lr 0.001 -b 32 -e 5 -o Adam*
 ![](Images/Aspose.Words.dae1e160-3b6f-42d8-a66c-830eb64c9f1e.003.png)
 
-
-
-
 # **Question 6:**
 
 Extracting the \*.json file, we can see the following conclusions.
